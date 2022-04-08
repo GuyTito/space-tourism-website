@@ -4,11 +4,13 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    
-  </header>
-
-  <RouterView />
+  <div class="bg-space-mb bg-no-repeat bg-center">
+    <header>
+      
+    </header>
+  
+    <RouterView />
+  </div>
 </template>
 
 

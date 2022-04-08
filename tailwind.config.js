@@ -16,6 +16,11 @@ module.exports = {
         serif : ["'Bellefair'", ...defaultTheme.fontFamily.serif],
         "bc": "'Barlow Condensed', sans",
       },
+      backgroundImage: {
+        "space-mb": "url(assets/home/background-home-mobile.jpg)",
+        "space-tab": "url(assets/home/background-home-tablet.jpg)",
+        "space-dt": "url(assets/home/background-home-desktop.jpg)",
+      },
     },
   },
   plugins: [],
