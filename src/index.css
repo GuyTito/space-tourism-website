@@ -34,4 +34,7 @@
   .nav-txt{
     @apply font-bc text-[16px]
   }
+  .border-style{
+    @apply border-transparent hover:border-white/50 mix-blend-normal transition-all duration-300 active:border-white
+  }
 }
