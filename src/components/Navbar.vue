@@ -27,7 +27,7 @@ watchEffect(()=> {
       <img src="assets/shared/icon-hamburger.svg" alt="menu">
     </button>
 
-    <nav class="font-bc text-sm leading-[17px] tracking-[2.36px] uppercase space-x-[37px] lg:space-x-12 bg-white/10 mix-blend-normal px-12 lg:px-0 lg:pl-[123px] lg:pr-[167px] hidden md:block">
+    <nav class="font-bc text-sm lg:text-[16px] leading-[17px] tracking-[2.36px] uppercase space-x-[37px] lg:space-x-12 bg-white/10 mix-blend-normal px-12 lg:px-0 lg:pl-[123px] lg:pr-[167px] hidden md:block">
       <ul v-for="item in menu" :key="item" class="inline-block">
         <li class="border-style border-b-4">
           <RouterLink :to="item" class="inline-block md:py-10">
