@@ -18,14 +18,23 @@ watchEffect(()=> {
 
 
 <template>
-  <header class="mx-6 flex justify-between items-center mt-6">
+  <header class="mx-6 md:mx-0 md:ml-12 mt-6 md:mt-0 flex justify-between items-center">
     <RouterLink to="/">
       <img src="assets/shared/logo.svg" alt="logo">
     </RouterLink>
 
-    <button @click="open = true">
+    <button @click="open = true" class="md:hidden">
       <img src="assets/shared/icon-hamburger.svg" alt="menu">
     </button>
+
+    <nav class="font-bc text-sm leading-[17px] tracking-[2.36px] uppercase space-x-[37px] bg-white/10 mix-blend-normal px-12 hidden md:block">
+      <ul v-for="item in menu" :key="item" class="inline-block">
+        <li class="border-style border-b-4">
+          <RouterLink :to="item" class="inline-block md:py-10">
+            <span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}
+          </RouterLink></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- mobile menu -->
@@ -41,8 +50,10 @@ watchEffect(()=> {
   
           <div class="">
             <ul v-for="item in menu" :key="item" class="font-bc text-[16px] tracking-[2.7px] leading-[19.2px] uppercase">
-              <li class="my-3 border-r-4 border-transparent hover:border-white/50 mix-blend-normal transition-all duration-300 active:border-white">
-                <RouterLink :to="item" class="w-full py-2 pl-8 inline-block"><span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}</RouterLink> 
+              <li class="my-3 border-r-4 border-style">
+                <RouterLink :to="item" class="w-full py-2 pl-8 inline-block">
+                  <span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}
+                </RouterLink> 
               </li>
             </ul>
           </div>
