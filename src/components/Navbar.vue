@@ -2,16 +2,16 @@
 import { ref, watchEffect } from 'vue';
 import { RouterLink, } from 'vue-router'
 
-const menu = ['home','destination', 'crew', 'technology']
+const menu = ['home','destination', ]
 
 const open = ref(false)
 
 watchEffect(()=> {
   if (open.value) {
-    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
     return
   }
-  document.documentElement.style.overflow = 'auto'
+  document.body.style.overflow = 'auto'
 })
 
 </script>
@@ -27,10 +27,10 @@ watchEffect(()=> {
       <img src="assets/shared/icon-hamburger.svg" alt="menu">
     </button>
 
-    <nav class="font-bc text-sm lg:text-[16px] leading-[17px] tracking-[2.36px] uppercase space-x-[37px] lg:space-x-12 bg-white/10 mix-blend-normal px-12 lg:px-0 lg:pl-[123px] lg:pr-[167px] hidden md:block">
-      <ul v-for="item in menu" :key="item" class="inline-block">
-        <li class="border-style border-b-4">
-          <RouterLink :to="item" class="inline-block md:py-10">
+    <nav class="font-bc text-sm lg:text-[16px] leading-[17px] tracking-[2.36px] uppercase  bg-white/10 mix-blend-normal px-12 lg:px-0 lg:pl-[123px] lg:pr-[167px] hidden md:block">
+      <ul class="space-x-[37px] lg:space-x-12">
+        <li v-for="item in menu" :key="item" class="border-style border-b-4 inline-block">
+          <RouterLink :to="{name: item}" class="inline-block md:py-10">
             <span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}
           </RouterLink>
         </li>
@@ -49,15 +49,13 @@ watchEffect(()=> {
             </button>
           </div>
   
-          <div class="">
-            <ul v-for="item in menu" :key="item" class="font-bc text-[16px] tracking-[2.7px] leading-[19.2px] uppercase">
-              <li class="my-3 border-r-4 border-style">
-                <RouterLink :to="item" class="w-full py-2 pl-8 inline-block">
-                  <span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}
-                </RouterLink> 
-              </li>
-            </ul>
-          </div>
+          <ul class="font-bc text-[16px] tracking-[2.7px] leading-[19.2px] uppercase">
+            <li v-for="item in menu" :key="item" class="my-3 border-r-4 border-style">
+              <RouterLink :to="{name: item}" class="w-full py-2 pl-8 inline-block">
+                <span class="font-bold">0{{ menu.indexOf(item) }}</span> {{item}}
+              </RouterLink> 
+            </li>
+          </ul>
         </div>
       </div>
     </Transition>
