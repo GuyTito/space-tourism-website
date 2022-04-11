@@ -7,10 +7,9 @@ import { useRouter } from 'vue-router';
 const destinations = (data['destinations'])
 const planet = ref(destinations[0])
 
-const body_classes = 'bg-destination-mob lg:bg-destination-desk'
+const body_classes = 'bg-destination-mob md:bg-destination-tab lg:bg-destination-desk'
 const router = useRouter()
 const current_route = router.currentRoute.value.name
-console.log(current_route);
 useBackgroundImage(current_route, 'destination', body_classes)
 
 
@@ -18,7 +17,7 @@ useBackgroundImage(current_route, 'destination', body_classes)
 
 
 <template>
-  <div class="mt-[34px] text-center">
+  <div class="mt-[34px] mb-14 text-center">
     <span class="above-h1">
       <span class="text-white/25">01</span>
       Pick your destination
@@ -37,7 +36,23 @@ useBackgroundImage(current_route, 'destination', body_classes)
 
       <h2 class="mt-5 uppercase text-white">{{ planet.name }}</h2>
 
-      <p class="leading-[25px]">{{ planet.description }}</p>
+      <div class="space-y-8 ">
+        <p class="leading-[25px]">{{ planet.description }}</p>
+
+        <div class="max-w-[87%] mx-auto h-px bg-[#383B4B]"></div>
+
+        <div class="flex flex-col space-y-3 uppercase">
+          <span class="sh2">AVG. DISTANCE</span>
+          <span class="sh1 text-white">{{ planet.distance }}</span>
+        </div>
+
+        <div class="flex flex-col space-y-3 uppercase">
+          <span class="sh2">Est. travel timeE</span>
+          <span class="sh1 text-white">{{ planet.travel }}</span>
+        </div>
+
+        <div></div>
+      </div>
 
     </div>
   </div>
