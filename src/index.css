@@ -11,7 +11,7 @@
     @apply text-[80px] md:text-[150px] font-serif
   }
   h2{
-    @apply text-[100px] font-serif
+    @apply text-[56px] lg:text-[100px] font-serif
   }
   h3{
     @apply text-[56px] font-serif
@@ -36,5 +36,8 @@
   }
   .border-style{
     @apply border-transparent hover:border-white/50 mix-blend-normal transition-all duration-300 active:border-white
+  }
+  .above-h1{
+    @apply font-bc text-[16px] md:text-[20px] lg:text-[28px] tracking-[2.7px] md:tracking-[3.4px] lg:tracking-[4.7px] md:leading-6 uppercase
   }
 }
