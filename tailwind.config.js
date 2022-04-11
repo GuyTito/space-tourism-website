@@ -21,6 +21,7 @@ module.exports = {
         "home-tab": "url(assets/home/background-home-tablet.jpg)",
         "home-desk": "url(assets/home/background-home-desktop.jpg)",
         "destination-mob": "url(assets/destination/background-destination-mobile.jpg)",
+        "destination-tab": "url(assets/destination/background-destination-tablet.jpg)",
         "destination-desk": "url(assets/destination/background-destination-desktop.jpg)",
       },
     },
