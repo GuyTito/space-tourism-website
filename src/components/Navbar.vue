@@ -2,7 +2,7 @@
 import { ref, watchEffect } from 'vue';
 import { RouterLink, } from 'vue-router'
 
-const menu = ['home','destination', ]
+const menu = ['home','destination', 'technology']
 
 const open = ref(false)
 
