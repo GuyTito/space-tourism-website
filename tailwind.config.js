@@ -23,6 +23,7 @@ module.exports = {
         "destination-mob": "url(assets/destination/background-destination-mobile.jpg)",
         "destination-tab": "url(assets/destination/background-destination-tablet.jpg)",
         "destination-desk": "url(assets/destination/background-destination-desktop.jpg)",
+        "tech-mob": "url(assets/technology/background-technology-mobile.jpg)",
       },
     },
   },
