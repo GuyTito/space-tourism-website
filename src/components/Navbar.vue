@@ -20,11 +20,11 @@ watchEffect(()=> {
 <template>
   <header class="mx-6 md:mx-0 md:ml-12 mt-6 md:mt-0 lg:mt-10 flex justify-between items-center">
     <RouterLink to="/">
-      <img src="assets/shared/logo.svg" alt="logo">
+      <img src="/assets/shared/logo.svg" alt="logo">
     </RouterLink>
 
     <button @click="open = true" class="md:hidden">
-      <img src="assets/shared/icon-hamburger.svg" alt="menu">
+      <img src="/assets/shared/icon-hamburger.svg" alt="menu">
     </button>
 
     <nav class="font-bc text-sm lg:text-[16px] leading-[17px] tracking-[2.36px] uppercase  bg-white/10 mix-blend-normal px-12 lg:px-0 lg:pl-[123px] lg:pr-[167px] hidden md:block">
@@ -45,7 +45,7 @@ watchEffect(()=> {
         <div class="w-[68.5%] bg-white/[0.04] backdrop-blur-[81.5px] h-full" >
           <div class="flex justify-end items-center mt-[34px] mr-6 mb-[60px]">
             <button @click="open = false">
-              <img src="assets/shared/icon-close.svg" alt="close">
+              <img src="/assets/shared/icon-close.svg" alt="close">
             </button>
           </div>
   
