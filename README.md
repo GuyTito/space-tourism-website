@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
-- [Live Site]()
+- [Solution](https://www.frontendmentor.io/solutions/a-multipage-mobile-website-HJnloEVEc)
+- [Live Site](https://space-tourism-fm.netlify.app/)
 
 ## My process
 
