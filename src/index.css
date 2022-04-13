@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  body{
+    @apply bg-space-black bg-no-repeat bg-center bg-cover
+  }
+}
+
 @layer components{
   .h1{
     @apply text-[80px] md:text-[150px] font-serif
